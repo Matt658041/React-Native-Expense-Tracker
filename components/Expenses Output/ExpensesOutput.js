@@ -48,8 +48,10 @@ export default function ExpensesOutput({ expenses, expensesPeriod }) {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 24,
-    backgroundColor: GlobalStyles.colors.primary700,
+    paddingHorizontal: 24,
+    paddingTop: 24,
+    paddingBottom: 48,
+    backgroundColor: GlobalStyles.colors.primary400,
     
   },
 });
