@@ -35,6 +35,12 @@ const DUMMY_EXPENSES = [
     amount: 18.99,
     date: new Date("2022-02-18"),
   },
+  {
+    id: "e6",
+    description: "Another Book",
+    amount: 40.99,
+    date: new Date("2022-02-18"),
+  },
 ];
 
 export default function ExpensesOutput({ expenses, expensesPeriod }) {
@@ -50,7 +56,7 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 24,
     paddingTop: 24,
-    paddingBottom: 48,
+    paddingBottom: 140,
     backgroundColor: GlobalStyles.colors.primary400,
     
   },
