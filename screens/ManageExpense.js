@@ -1,10 +1,12 @@
 import { View, StyleSheet } from "react-native";
-import React, { useLayoutEffect } from "react";
+import React, { useContext, useLayoutEffect } from "react";
 import IconButton from "../components/UI/IconButton";
 import { GlobalStyles } from "../constants/styles";
 import Button from "../components/UI/Button";
+import { ExpensesContext } from "../store/expenses-context";
 
 export default function ManageExpense({ route, navigation }) {
+  const expensesCtx = useContext(ExpensesContext)
   const editedExpenseId = route.params?.expenseId;
 
   const isEditing = !!editedExpenseId;
@@ -15,11 +17,18 @@ export default function ManageExpense({ route, navigation }) {
     });
   }, [navigation, isEditing]);
 
-  function deleteExpenseHandler() {}
+  function deleteExpenseHandler() {
+    navigation.goBack();
+    expensesCtx
+  }
 
-  function cancelHandler() { }
+  function cancelHandler() {
+    navigation.goBack();
+   }
   
-  function confirmHandler() {}
+  function confirmHandler() {
+     navigation.goBack();
+  }
 
   return (
     <View style={styles.container}>
